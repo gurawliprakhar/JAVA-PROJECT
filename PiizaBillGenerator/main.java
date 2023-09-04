@@ -1,16 +1,17 @@
 import java.util.Scanner;
+
 public class main {
 
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("Welcome to the Pizza Shop");
-		
-		System.out.println("Is the pizza vegetarian ? (true/false): ");
-		boolean isVegetarian = scan.nextBoolean();
-		Pizza pizza = new Pizza(isVegetarian);
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
-		System.out.print("Add extra cheese (true/false): ");
+        System.out.println("Welcome to the Pizza Shop");
+
+        System.out.println("Is the pizza vegetarian ? (true/false): ");
+        boolean isVegetarian = scan.nextBoolean();
+        Pizza pizza = new Pizza(isVegetarian);
+
+        System.out.print("Add extra cheese (true/false): ");
         boolean addExtraCheese = scan.nextBoolean();
         if (addExtraCheese) {
             pizza.addExtraCheese();
@@ -29,8 +30,8 @@ public class main {
         }
 
         pizza.getBill();
-        
+
         scan.close();
-	}
+    }
 
 }
